@@ -24,4 +24,5 @@ dist-ssr
 *.sw?
 node_modules
 dist
+# 환경 변수
 .env
