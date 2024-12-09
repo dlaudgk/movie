@@ -1,9 +1,32 @@
-import React from 'react';
-import movieDetailData from './movieDetailData.json';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { fetchMovieDetails } from '../api/tmdb';
 import './MovieDetail.css';
 
 const MovieDetail = () => {
-  const movie = movieDetailData;
+  const { id } = useParams();
+  const [movie, setMovie] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const getMovieDetails = async () => {
+      try {
+        const movieData = await fetchMovieDetails(id);
+        setMovie(movieData);
+      } catch (error) {
+        console.error("Error fetching movie details:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    getMovieDetails();
+  }, [id]);
+
+  if (loading) return <p>Loading...</p>;
+
+  if (!movie) return <p>Movie not found.</p>;
+
 
   return (
     <div className="movie-detail">

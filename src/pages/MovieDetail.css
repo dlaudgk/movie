@@ -20,14 +20,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
-  padding: 20px;
 }
 
 .title {
   font-size: 2rem;
-  width: 50%;
-  margin: 10px;
+  width: 60%;
+  margin: 30px;
 }
 
 .genres {

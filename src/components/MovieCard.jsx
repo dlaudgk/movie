@@ -4,12 +4,12 @@ import './styles/MovieCard.css';
 
 const MovieCard = ({ movie }) => (
   <div className="movie-card">
-    <Link to="/details">
+    <Link to={`/details/${movie.id}`}>
       <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
     </Link>
     <h3>{movie.title}</h3>
     <p className='star'>⭐ {movie.vote_average}</p>
-  </div>
+  </div>  
 );
 
 export default MovieCard;
