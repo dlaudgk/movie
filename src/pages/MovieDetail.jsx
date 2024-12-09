@@ -10,14 +10,8 @@ const MovieDetail = () => {
 
   useEffect(() => {
     const getMovieDetails = async () => {
-      try {
         const movieData = await fetchMovieDetails(id);
         setMovie(movieData);
-      } catch (error) {
-        console.error("Error fetching movie details:", error);
-      } finally {
-        setLoading(false);
-      }
     };
 
     getMovieDetails();
