@@ -1,22 +1,25 @@
+/* MovieCard.css */
 .movie-card {
-  border: 1px solid gray;
+  border: 1px solid #eee;
   border-radius: 10px;
-  width: 200px;
-  text-align: center;
-  margin: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .movie-card img {
   width: 100%;
   height: 80%;
-  border-radius: 10px;
 }
 
 .movie-card h3 {
-  font-size: 0.9rem;
-  margin: 0.5rem 0;
+  margin: 10px;
+  font-size: 16px;
+  text-align: center;
 }
 
 .star {
-  text-align: right;
+  color: #f5c518;
+  font-weight: bold;
+  margin: 5px;
+  text-align: center;
 }

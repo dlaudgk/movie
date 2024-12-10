@@ -13,3 +13,10 @@ export const fetchMovieDetails = async (id) => {
   return data;
 };
 
+export const searchMovies = async (query) => {
+  const response = await fetch(
+    `${API_BASE_URL}/search/movie?api_key=${API_KEY}&language=ko-KR&query=${encodeURIComponent(query)}`
+  );
+  const data = await response.json();
+  return data.results.filter((movie) => !movie.adult);
+};

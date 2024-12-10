@@ -1,14 +1,22 @@
+/* NavBar.css */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #141414;
+  padding: 10px 20px;
   color: white;
-  padding: 1rem;
 }
 
-.navbar a {
+.search-input {
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #333;
   color: white;
-  text-decoration: none;
-  margin-left: 1rem;
+  font-size: 14px;
+}
+
+.search-input::placeholder {
+  color: #aaa;
 }
